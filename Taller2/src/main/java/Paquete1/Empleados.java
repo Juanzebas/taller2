@@ -10,14 +10,17 @@ package Paquete1;
  * @author sebas
  */
 public class Empleados {
-        private int id;
+         private int id;
 	private String Nombre;
 	private String Apellido;
+        private double salario;
+        
 
-	public Empleados(int id, String nombre, String apellido) {
+	public Empleados(int id, String nombre, String apellido, double salario) {
 		this.id = id;
 		this.Nombre = nombre;
 		this.Apellido = apellido;
+                this.salario = salario;
 	}
 	public int getId() {
 		return id;
@@ -37,9 +40,15 @@ public class Empleados {
 	public void setApellido(String apellido) {
 		this.Apellido = apellido;
 	}
+        public double getSalario() {
+		return salario;
+	}
+
+	public void setSalario(double salario) {
+		this.salario = salario;
+	}
 	@Override
 	public String toString() {
-		return " id: " + id + ", nombre: " + Nombre + ", apellido: " + Apellido +"";
+		return " Id: " + id + ", Nombre: " + Nombre + ", Apellido: " + Apellido + ", Salario: " + salario + "";
 	}
-} 
-
+}
